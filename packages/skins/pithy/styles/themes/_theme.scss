@@ -1,0 +1,74 @@
+#{$prefix}header {
+    background-color: $pithy-header-background-color;
+
+    /*logo*/
+    #{$prefix}logo {
+        &-box {
+            background-color: $pithy-logo-box-background-color;
+        }
+
+        &-text {
+            color: $pithy-logo-text-color;
+        }
+    }
+
+    &-left {
+
+        #{$prefix}breadcrumb {
+
+            .el-breadcrumb__item {
+                .el-breadcrumb__inner {
+                    color: $pithy-breadcrumb-color;
+
+                    &.is-link {
+                        color: $pithy-breadcrumb-link-color;
+                    }
+                }
+
+                .el-breadcrumb__separator {
+                    color: $pithy-breadcrumb-separator-color;
+                }
+            }
+        }
+    }
+}
+#{$prefix}main {
+    
+
+    #{$prefix}content {
+        background: $pithy-main-background-color;
+    }
+}
+
+/*侧边栏*/
+#{$prefix}sidebar {
+    background-color: $pithy-sidebar-background-color;
+
+    
+}
+
+#{$prefix}menus {
+    background-color: $pithy-menus-background-color !important;
+}
+
+.el-menu,
+.el-menu--vertical {
+    background-color: $pithy-menus-background-color !important;
+
+    .el-menu-item,
+    .el-submenu__title {
+        color: $pithy-menus-menu-color !important;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: $pithy-menus-menu-hover-background-color !important;
+            color: $pithy-menus-menu-hover-color !important;
+        }
+
+        &.is-active {
+            background: $pithy-menus-menu-active-background-color !important;
+            color: $pithy-menus-menu-active-color !important;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/*主题色*/
+$pithy-theme-color: #0078D7;
+
+/*header*/
+$pithy-header-background-color: $pithy-theme-color;
+$pithy-header-color:#fff;
+
+/*面包屑*/
+$pithy-breadcrumb-color:#e4e7ed;
+$pithy-breadcrumb-separator-color:#dcdfe6;
+$pithy-breadcrumb-link-color:#fff;
+
+/*main*/
+$pithy-main-background-color: #f0f0f0;
+
+/*sidebar*/
+$pithy-sidebar-background-color: #f9fafc;
+
+/*logo*/
+$pithy-logo-box-background-color: $pithy-theme-color;
+$pithy-logo-text-color: #fff;
+
+/*menus*/
+$pithy-menus-background-color: #fff;
+$pithy-menus-menu-color:#444;
+
+$pithy-menus-menu-active-background-color:rgb(40, 152, 243);
+$pithy-menus-menu-active-color:#fff;
+
+$pithy-menus-menu-hover-background-color:rgba(64, 158, 255, 0.3);
+$pithy-menus-menu-hover-color:#444;

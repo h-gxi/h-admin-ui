@@ -1,0 +1,29 @@
+/*侧边栏*/
+#{$prefix}sidebar {
+    position: relative;
+    display: flex;
+    width: 230px;
+    align-items: stretch;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: all 0.25s ease-in;
+
+    &.collapse {
+        width: 65px;
+
+        /*logo*/
+        #{$prefix}logo {
+            &-text {
+                display: none;
+            }
+        }
+    }
+}
+
+#{$prefix}menu-wapper {
+    position: relative;
+    flex-grow: 1;
+
+}
+
+@import '../menus/index';

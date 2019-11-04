@@ -1,0 +1,15 @@
+@import './default/index';
+@import './mazarine/index';
+@import './blueblack/index';
+@import './blue-light/index';
+
+#{$prefix}tabnav {
+    &-tabs {
+        .el-tabs__header {
+
+            .el-tabs__nav {
+                padding-left: 5px;
+            }
+        }
+    }
+}

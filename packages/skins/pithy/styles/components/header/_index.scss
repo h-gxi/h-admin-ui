@@ -1,0 +1,85 @@
+#{$prefix}header {
+    padding-right: 0;
+    display: flex;
+    flex-shrink: 0;
+    height: 55px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+    /*logo*/
+    &-logo {
+        @include flex-row();
+        flex-shrink: 0;
+        height: 55px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+
+        &-img {
+            flex-shrink: 0;
+            margin: 5px 11px;
+            width: 40px;
+            height: 45px;
+        }
+
+        &-text {
+            flex-grow: 1;
+            text-align: center;
+            @include vertical-center(55px);
+            font-size: 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+    }
+
+    &-left {
+        position: relative;
+        padding-left: 50px;
+        flex-shrink: 0;
+        overflow: hidden;
+
+        /*侧边栏隐藏切换按钮*/
+        #{$prefix}sidebar-toggle-btn {
+            position: absolute;
+            left: 0;
+            @include vertical-center(55px);
+            width: 50px;
+            font-size: 25px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+
+            @include toolbar-hover-border();
+        }
+
+        #{$prefix}breadcrumb {
+            @include vertical-center(55px);
+        }
+    }
+
+    &-right {
+        display: flex;
+        flex-grow: 1;
+        @include vertical-center(55px);
+        justify-content: flex-end;
+
+        #{$prefix}toolbar {
+            @include vertical-center(55px);
+            &-item:before {
+                top: auto;
+                bottom: 0 !important;
+                background: #fff;
+            }
+        }
+    }
+
+    &-userinfo {
+        margin: 0 10px 0 5px;
+        position: relative;
+        cursor: pointer;
+        @include toolbar-hover-border();
+
+        .el-dropdown {
+            color: #fff;
+        }
+    }
+}
