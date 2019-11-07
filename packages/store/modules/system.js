@@ -12,8 +12,6 @@ export default {
     logo: '',
     /** 首页 */
     home: '',
-    /** 登录页背景图 */
-    loginbg: '',
     /** 工具栏 */
     toolbar: {
       // 全屏
@@ -41,6 +39,8 @@ export default {
     loginOptions: {
       // 登录页类型
       type: 'default',
+      // 登录类型选项
+      typeOptions: [],
       // 是否启用验证码
       verifyCode: false,
       /** 登录账户类型列表
@@ -52,6 +52,8 @@ export default {
       */
       accountTypes: null
     },
+    /** 版权声明 */
+    copyright: '',
     /************************************************************/
     /** 需要在代码中设置的属性 */
     /************************************************************/
