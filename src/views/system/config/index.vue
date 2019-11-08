@@ -31,7 +31,8 @@
       <el-row :gutter="20">
         <el-col :span="5" :offset="1">
           <el-form-item label="登录页：" prop="type">
-            <el-input v-model="form.model.loginOptions.type" placeholder="请输入登录页名称，默认default" />
+            <!-- <el-input v-model="form.model.loginOptions.type" placeholder="请输入登录页名称，默认default" /> -->
+            <nm-select :clearable="false" v-model="form.model.loginOptions.type" :method="typeOptions" />
           </el-form-item>
         </el-col>
         <el-col :span="5">
@@ -150,6 +151,7 @@ export default {
   },
   computed: {
     ...mapState('app/token', ['accessToken']),
+    ...mapState('app/system', { loginOptions: s => s.loginOptions }),
     logoUpload() {
       return {
         action: api.uploadLogoUrl(),
@@ -192,6 +194,12 @@ export default {
         this.form.model.logo = res.data.fullPath
         this.form.model.logoUrl = res.data.url
       }
+    },
+    typeOptions() {
+      return new Promise(resolve => {
+        let options = this.loginOptions.typeOptions.map(p => { return { 'label': p, 'value': p } })
+        resolve(options || [])
+      })
     }
   },
   created() {
